@@ -1,14 +1,21 @@
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
-<link rel="import" href="../bower_components/paper-input/paper-input.html">
 
 <dom-module id="main-panel">
     <template>
-        <div>
-            <paper-input id="inputId" value="{{userInput}}"></paper-input>
-            <button id="helloButton" on-click="sayHello">Say hello</button>
-            <div id="greeting">[[greeting]]</div>
+        <style>
+            #menu {
+                background: white;
+                width: 150px;
+                height: 100vh;
+                color: black;
+            }
+
+        </style>
+        <div id="menu">
+            <label>Menu</label>
         </div>
+        <slot></slot>
     </template>
     <script>
         class MainPanel extends Polymer.Element {
@@ -16,6 +23,7 @@
                 return 'main-panel'
             }
         }
+
         customElements.define(MainPanel.is, MainPanel);
     </script>
 </dom-module>

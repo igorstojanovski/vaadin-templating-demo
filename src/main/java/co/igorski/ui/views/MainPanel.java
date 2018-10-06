@@ -3,6 +3,7 @@ package co.igorski.ui.views;
 import co.igorski.ui.model.MainPanelModel;
 import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.HtmlImport;
+import com.vaadin.flow.component.dependency.StyleSheet;
 import com.vaadin.flow.component.page.Viewport;
 import com.vaadin.flow.component.polymertemplate.EventHandler;
 import com.vaadin.flow.component.polymertemplate.PolymerTemplate;
@@ -15,6 +16,7 @@ import java.util.Optional;
 
 @Tag("main-panel")
 @HtmlImport("src/main-panel.html")
+@StyleSheet("styles.css")
 
 @Route("")
 @Viewport("width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes")
