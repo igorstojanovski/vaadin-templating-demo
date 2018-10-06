@@ -1,0 +1,21 @@
+<link rel="import" href="../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="../bower_components/paper-input/paper-input.html">
+
+<dom-module id="main-panel">
+    <template>
+        <div>
+            <paper-input id="inputId" value="{{userInput}}"></paper-input>
+            <button id="helloButton" on-click="sayHello">Say hello</button>
+            <div id="greeting">[[greeting]]</div>
+        </div>
+    </template>
+    <script>
+        class MainPanel extends Polymer.Element {
+            static get is() {
+                return 'main-panel'
+            }
+        }
+        customElements.define(MainPanel.is, MainPanel);
+    </script>
+</dom-module>
